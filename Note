@@ -1,0 +1,7 @@
+從Amazon EC2建立一台 t2.micro的執行個體(instance) 
+OS是Ubuntu14.04 LTS，預設的登入帳號是ubuntu
+
+登入(ssh)的方式有兩種，且必需要
+1. 直接從Linux上面登入
+ssh ubuntu@public ip
+
