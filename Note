@@ -1,7 +1,23 @@
 從Amazon EC2建立一台 t2.micro的執行個體(instance) 
 OS是Ubuntu14.04 LTS，預設的登入帳號是ubuntu
 
-登入(ssh)的方式有兩種，且必需要
+登入(ssh)的方式有兩種，且必需要帶著key一起登入
 1. 直接從Linux上面登入
-ssh ubuntu@public ip
+  ssh ubuntu@public ip -i KeyName (必需要在key存在的那個路徑下指令)
+2. 用putty
+  2.1 先用puttyGen將pem(Amazon給的key副檔名)檔轉成ppk檔(putty吃的key的副檔名)
+      puTTYGen網址：http://tartarus.org/~simon/putty-snapshots/x86/puttygen.exe    (x86 ISA的程式)
+      2.1.1   Convertion欄位下的inport key
+      2.2.2   再來save private key as 
+  2.2 再來設定一下putty進行登入
+      2.2.1   鍵入IP欄
+      2.2.2   來到左邊category的SSH底下的Auth畫面，載入剛剛生成的ppk檔
+      2.2.3   左邊Connection底下的Data，設定登入帳號為ubuntu
+      2.2.4   回到主畫面save並登入
+
+
+      
+  
+  
+
 
